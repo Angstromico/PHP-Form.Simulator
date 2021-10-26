@@ -1,0 +1,191 @@
+body {
+  background-color: blue;
+  color: white;
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+label:hover {
+  cursor: pointer;
+}
+.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 90%;
+  border-radius: 5vh;
+  padding: 1rem;
+  background-color: darkblue;
+  max-width: 1550px;
+  justify-content: center;
+}
+legend {
+  margin: 2rem auto;
+  padding: 1rem 0.3rem;
+  font-size: 2.5rem;
+}
+input,
+#button {
+  flex: 1;
+  padding: 1rem 0.3rem;
+  border-radius: 1.1vh;
+  margin-bottom: 2rem;
+}
+input:focus {
+  border: 1px solid rgb(190, 168, 168);
+}
+#button {
+  text-transform: uppercase;
+  color: #cccc00;
+  font-weight: 900;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+#button:hover {
+  cursor: no-drop;
+  background-color: greenyellow;
+  color: #ffff33;
+}
+input[type='submit'] {
+  display: none;
+}
+label {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+}
+select {
+  padding: 0.6rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+span {
+  color: red;
+}
+@media (min-width: 568px) {
+  .radio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.send-img {
+  width: 25%;
+}
+.invalid {
+  color: red;
+  opacity: 0;
+  transition: opacity ease-in-out 1s;
+}
+.success {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 900;
+  color: green;
+  background-color: lightblue;
+  animation: dissapear 5s linear;
+  padding: 1rem;
+}
+@keyframes dissapear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.container {
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+  max-width: 1550px;
+}
+.container span {
+  font-weight: bold;
+}
+
+.woman {
+  background-color: rgb(159, 13, 38);
+  padding: 1rem;
+  border-radius: 5vh;
+}
+.woman span {
+  color: violet;
+}
+.man {
+  background-color: darkblue;
+  padding: 1rem;
+  border-radius: 5vh;
+}
+.right:hover,
+.bad:hover {
+  cursor: pointer;
+  filter: invert(100%);
+}
+.right,
+.bad {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+}
+.right {
+  background-color: #5cb85c;
+  border-radius: 1vh;
+  padding: 1rem 1.5rem;
+}
+.bad {
+  background-color: #f0ad4e;
+  border-radius: 1vh;
+  padding: 1rem 1.5rem;
+}
+#form2 {
+  background-color: black;
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  border-radius: 6vh;
+}
+#form2 input,
+#form2 select {
+  flex: 1;
+}
+#form2 label {
+  padding: 1rem;
+}
+#form2 label:hover {
+  color: #ccff00;
+  background-color: #ff00cc;
+}
+.submit-button {
+  padding: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: rgb(184, 184, 218);
+  background-color: rgb(31, 5, 5);
+  border-radius: 5vh;
+  border: none;
+}
+.submit-button:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}
+.opacity-zero {
+  opacity: 0;
+}
+.container .non-existens {
+  display: none !important;
+}
