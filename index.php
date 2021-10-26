@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Form Sending PHP Simulator" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Angstromico/PHP-Form.Simulator/master/PHPFormSimulator.png" />
+    <meta property="og:url" content="https://php-form-simulator.herokuapp.com/" />
     <meta property="og:description" content="A PHP Form that use the method POST" />
     <meta property="og:type" content="website" />
     <meta property="og:image:width" content="828" />
@@ -15,7 +16,8 @@
     <meta property="og:site_name" content="PHP-Form-Manuel" />
     <meta property="fb:app_id" content="928977633900253" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image" content="" />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/Angstromico/PHP-Form.Simulator/master/PHPFormSimulator.png" />
     <link rel="stylesheet" href="css/style.css">
     <title>Manuel First PHP Forms</title>
 </head>
