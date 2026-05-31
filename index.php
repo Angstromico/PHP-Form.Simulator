@@ -1,70 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Form Sending PHP Simulator" />
-    <meta property="og:image"
-        content="https://raw.githubusercontent.com/Angstromico/PHP-Form.Simulator/master/PHPFormSimulator.png" />
-    <meta property="og:url" content="https://php-form-simulator.herokuapp.com/" />
-    <meta property="og:description" content="A PHP Form that use the method POST" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image:width" content="828" />
-    <meta property="og:image:height" content="450" />
-    <meta property="og:site_name" content="PHP-Form-Manuel" />
-    <meta property="fb:app_id" content="928977633900253" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:image"
-        content="https://raw.githubusercontent.com/Angstromico/PHP-Form.Simulator/master/PHPFormSimulator.png" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Manuel First PHP Forms</title>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Registration Form Simulator</title>
 </head>
-
 <body>
     <main>
         <h1>Registration Form</h1>
-        <form action="pasive.php" method="POST" id="form" class="form">
+        <form action='pasive.php' method='POST' id='form' class='form'>
             <legend>Personal Data Registration</legend>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" name="name" require data-input="1">
-            <p class="invalid" data-invalid="1">Fill The Field Before Proceeding</p>
-            <label for="email">Your Email</label>
-            <input type="email" name="email" id="email" placeholder="Your Mail" require data-input="2">
-            <p class="invalid" data-invalid="2">Fill The Field Properly Before Proceeding</p>
-            <h2>Chose your gender</h2>
-
-            <div class="radio-container">
-                <div class="flex-container">
-                    <label for="sex" class="masculine">Masculine</label>
-                    <input type="radio" name="sex" id="man" value="man" require>
+            <div class='input-group'>
+                <label for='name'>Name</label>
+                <input type='text' id='name' placeholder='Your Name' name='name' required data-input='1'>
+                <p class='invalid' data-invalid='1'>Fill the field before proceeding</p>
+            </div>
+            <div class='input-group'>
+                <label for='email'>Your Email</label>
+                <input type='email' name='email' id='email' placeholder='name@example.com' required data-input='2'>
+                <p class='invalid' data-invalid='2'>Please enter a valid email address</p>
+            </div>
+            <h2>Choose your gender</h2>
+            <div class='radio-container'>
+                <div class='flex-container'>
+                    <input type='radio' name='sex' id='man' value='man' required>
+                    <label for='man'>Masculine</label>
                 </div>
-                <div class="flex-container">
-                    <label for="sex" class="femenine">Femenine</label>
-                    <input type="radio" name="sex" id="woman" value="woman" require>
+                <div class='flex-container'>
+                    <input type='radio' name='sex' id='woman' value='woman' required>
+                    <label for='woman'>Feminine</label>
                 </div>
             </div>
-
-            <label for="year"> Put your Year of Bird Here</label>
-            <select name="year" id="year" require data-input="3">
-                <option selected disabled>Chose The Year</option>
-                <?php 
-                for($i = 2021; $i >= 1940; $i--  ) { 
-                    ?>
-                <option value="<?php echo $i ?>"><?php echo $i ?></option>
-                <?php }
-            ?>
-            </select>
-
-            <label for="terms">Do you accept our terms and conditions?</label>
-            <input type="checkbox" name="checkbox" id="terms" value="ok" require>
-            <div class="center"></div>
-            <button type="button" id="button">Send</button>
-            <input type="submit" value="Send" id="submit">
+            <div class='input-group'>
+                <label for='year'>Year of Birth</label>
+                <select name='year' id='year' required data-input='3'>
+                    <option selected disabled value=''>Choose The Year</option>
+                    <?php for($i = date('Y'); $i >= 1940; $i--) { ?>
+                    <option value='<?php echo $i ?>'><?php echo $i ?></option>
+                    <?php } ?>
+                </select>
+                <p class='invalid' data-invalid='3'>Please select your year of birth</p>
+            </div>
+            <div class='flex-container terms-container'>
+                <input type='checkbox' name='checkbox' id='terms' value='ok' required>
+                <label for='terms'>I accept the terms and conditions</label>
+            </div>
+            <div class='center'></div>
+            <button type='button' id='button' disabled>Send Registration</button>
+            <input type='submit' value='Send' id='submit'>
         </form>
     </main>
-    <script src="js/app.js"></script>
+    <script src='js/app.js'></script>
 </body>
-
 </html>
